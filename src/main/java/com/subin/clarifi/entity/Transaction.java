@@ -15,6 +15,8 @@ import jakarta.persistence.EnumType;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -43,6 +45,7 @@ public class Transaction{
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
+    @JsonIgnore
     private User user;
 
     public enum FinanceType{

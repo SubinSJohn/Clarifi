@@ -28,7 +28,7 @@ public class UserController{
         return new ResponseEntity<>(registeredUser, HttpStatus.CREATED);
     }
 
-    @GetMapping("/login/{username}")
+    @GetMapping("/login/{username}") 
     public ResponseEntity<UserRegistrationRespondDTO> loadUserByEmail(@PathVariable String username){
 
         UserRegistrationRespondDTO respondUser = userService.findByUsername(username);
